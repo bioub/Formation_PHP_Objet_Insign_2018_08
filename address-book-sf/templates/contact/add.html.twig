@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un contact{% endblock %}
+
+{% block body %}
+    {{ form_start(contact_form, {attr: {'novalidate': 'novalidate'}}) }}
+        {{ form_row(contact_form.firstName) }}
+        {{ form_row(contact_form.lastName) }}
+        {{ form_row(contact_form.company) }}
+        <div>
+            <button>Ajouter</button>
+        </div>
+    {{ form_end(contact_form) }}
+{% endblock %}

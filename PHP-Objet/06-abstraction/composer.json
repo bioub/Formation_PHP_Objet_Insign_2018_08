@@ -1,6 +1,8 @@
 {
     "require": {
-        "psr/log": "^1.0"
+        "psr/log": "^1.0",
+        "zendframework/zend-mail": "^2.10",
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
         "psr-4": {

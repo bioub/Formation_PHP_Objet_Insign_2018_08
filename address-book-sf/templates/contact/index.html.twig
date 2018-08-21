@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des contacts{% endblock %}
+
+{% block body %}
+<h2>Liste des contacts</h2>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Société</th>
+        </tr>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.lastName }}</td>
+            <td>
+                {% if contact.company %}
+                {{ contact.company.name }}
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<h2>Menu</h2>
+<ul>
+    <li>
+        <a href="{{ path('app_static_index') }}">Home</a>
+    </li>
+    <li>
+        <a href="{{ path('app_contact_index') }}">Contact List</a>
+    </li>
+    <li>
+        <a href="{{ path('app_contact_add') }}">Contact Add</a>
+    </li>
+</ul>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
